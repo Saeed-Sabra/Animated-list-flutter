@@ -85,12 +85,10 @@ class _MyListViewState extends State<MyListView> {
   final List<String> _items = [];
 
   void _addItem() {
-    setState(
-      () {
-        int newItemIndex = _items.length + 1;
-        _items.add('Item $newItemIndex');
-      },
-    );
+    final newFirstItem = 'New Item ${_items.length + 1}';
+    setState(() {
+      _items.insert(0, newFirstItem);
+    });
   }
 
   @override
@@ -105,12 +103,14 @@ class _MyListViewState extends State<MyListView> {
         centerTitle: true,
         // leading: Container(),
         elevation: 0,
-        actions: [
-          IconButton(
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: IconButton(
+            onPressed: () => _addItem(),
             icon: const Icon(Icons.add),
-            onPressed: _addItem,
+            color: Colors.white,
           ),
-        ],
+        ),
       ),
 
       body: AnimationLimiter(
@@ -144,7 +144,7 @@ class _MyListViewState extends State<MyListView> {
                     title: Padding(
                       padding: const EdgeInsets.only(top: 20),
                       child: Text(
-                        "Animations $index",
+                        _items[index],
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
