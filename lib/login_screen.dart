@@ -21,6 +21,7 @@ class _login_screenState extends State<login_screen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
@@ -164,8 +165,8 @@ class _login_screenState extends State<login_screen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 160,
+              SizedBox(
+                height: size.height / 4,
               ),
               SizedBox(
                 child: TextButton(

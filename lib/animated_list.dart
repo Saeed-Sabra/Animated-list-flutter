@@ -169,10 +169,6 @@ class _MyListViewState extends State<MyListView> {
           },
         ),
       ),
-      bottomNavigationBar: FloatingActionButton(
-        onPressed: () => _addItem(),
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
