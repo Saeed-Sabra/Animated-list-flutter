@@ -166,7 +166,7 @@ class _login_screenState extends State<login_screen> {
                 ),
               ),
               SizedBox(
-                height: size.height / 4,
+                height: size.height / 5,
               ),
               SizedBox(
                 child: TextButton(
