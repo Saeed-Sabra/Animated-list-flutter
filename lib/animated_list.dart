@@ -49,7 +49,6 @@ class _MyListViewState extends State<MyListView> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       // ignore: prefer_const_constructors

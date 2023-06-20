@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_22/login_screen.dart';
 import 'package:task_22/share/bloc/cubit.dart';
-import 'package:task_22/share/simple_bloc_observer.dart';
 
 void main() {
-  BlocObserver Observer = new SimpleBlocObserver();
   runApp(const MyApp());
 }
 
